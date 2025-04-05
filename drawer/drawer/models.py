@@ -24,7 +24,8 @@ class Plan(models.Model):
     )
     project_id = models.ForeignKey(
         Project,
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE,
+        related_name='plans'
     )
 
     def __str__(self):
